@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/fame/%{name}-%{version}.tar.gz
+# Source0-md5: 256d93f51820e5ec5e1ba97a67ef4d20
 URL:		http://fame.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
