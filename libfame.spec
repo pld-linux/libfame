@@ -7,6 +7,9 @@ License:	LGPL
 Group:		Libraries
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/fame/%{name}-%{version}.tar.gz
 URL:		http://fame.sourceforge.net
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,7 +52,12 @@ statyczn± wersjê biblioteki FAME.
 %setup -q
 
 %build
-%configure2_13
+rm -f missing acinclude.m4
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c -f
+%configure
 %{__make}
 
 %install
@@ -68,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.gz README.gz
+%doc *.gz
 %{_libdir}/lib*.so.*
 
 %files devel
