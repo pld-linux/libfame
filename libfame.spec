@@ -23,7 +23,7 @@ FAME to biblioteka do szybkiego kodowania MPEG.
 Summary:	Includes to develop using FAME
 Summary(pl):	Pliki nag³ówkowe FAME
 Group:		Development/Libraries
-Requires:	%{name}
+Requires:	%{name} = %{version}
 
 %description devel
 FAME is a library for fast MPEG encoding. This package contains
@@ -39,13 +39,13 @@ korzystaj±cych z FAME.
 Summary:	FAME static libraries
 Summary(pl):	Biblioteki statyczne FAME
 Group:		Development/Libraries
-Requires:	%{name}
+Requires:	%{name}-devel = %{version}
 
 %description static
 FAME is a library for fast MPEG encoding. This package contains static
 version of FAME library.
 
-%description devel -l pl
+%description static -l pl
 FAME to biblioteka do szybkiego kodowania MPEG. Ten pakiet zawiera
 statyczn± wersjê biblioteki FAME.
 
