@@ -11,7 +11,7 @@ Group(pl):	Biblioteki
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
-Source0:	%{name}-%{PACKAGE_VERSION}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/fame/%{name}-%{version}.tar.gz
 URL:		http://fame.sourceforge.net
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,7 +42,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %setup -q
 
 %build
-%configure
+%configure2_13
 %{__make}
 
 %install
