@@ -1,3 +1,9 @@
+# 
+# TODO:
+# - fix mmx sse stuff
+# - http://sourceforge.net/tracker/index.php?func=detail&aid=977600&group_id=19741&atid=119741
+# - fix -march forcing in configure.in
+#
 Summary:	Fast Assembly Mpeg Encoding library
 Summary(pl):	Szybka biblioteka koduj±ca MPEG
 Name:		libfame
