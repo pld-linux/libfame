@@ -5,7 +5,7 @@ Version:	0.9.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/fame/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/fame/%{name}-%{version}.tar.gz
 URL:		http://fame.sourceforge.net
 BuildRequires:	autoconf
 BuildRequires:	automake
