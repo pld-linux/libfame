@@ -75,7 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README
-%{_libdir}/lib*.so.*
+%{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
