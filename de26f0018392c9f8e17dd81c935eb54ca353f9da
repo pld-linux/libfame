@@ -1,0 +1,2 @@
+- updated to 0.8.9 (new stable version),
+- switch to DESTDIR style %%install.
