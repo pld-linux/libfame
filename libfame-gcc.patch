@@ -6,7 +6,7 @@ diff -Naur libfame-0.9.1-orig/src/half_mmx.h libfame-0.9.1/src/half_mmx.h
  /**************************** half-pixel interpolation ***********************/
  
 -static short const _mmx_one[] = { 1, 1, 1, 1 };
-+const _mmx_one[] = { 1, 1, 1, 1 };
++short const _mmx_one[] = { 1, 1, 1, 1 };
  
  static void inline mmx_interpolate(unsigned char **ref,
  				   int pitch,
@@ -19,7 +19,7 @@ diff -Naur libfame-0.9.1-orig/src/half_sse.h libfame-0.9.1/src/half_sse.h
  /**************************** half-pixel interpolation ***********************/
  
 -static short const _mmx_one[] = { 1, 1, 1, 1 };
-+const _mmx_one[] = { 1, 1, 1, 1 };
++short const _mmx_one[] = { 1, 1, 1, 1 };
  static unsigned char const _mmx_one_byte[] = {1,1,1,1,1,1,1,1};
  
  
