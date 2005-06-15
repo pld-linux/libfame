@@ -4,6 +4,9 @@
 # - http://sourceforge.net/tracker/index.php?func=detail&aid=977600&group_id=19741&atid=119741
 # - fix -march forcing in configure.in
 #
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Fast Assembly Mpeg Encoding library
 Summary(pl):	Szybka biblioteka koduj±ca MPEG
 Name:		libfame
@@ -69,7 +72,8 @@ rm -f acinclude.m4
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -98,6 +102,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_aclocaldir}/*
 %{_mandir}/man3/*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/*.a
+%endif
