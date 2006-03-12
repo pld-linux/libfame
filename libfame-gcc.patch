@@ -66,3 +66,35 @@ diff -uNr libfame-0.9.1/src.orig/table_mmx_const.h libfame-0.9.1/src/table_mmx_c
  
  /* AA&N coefficients */
  /* 2*cos(4pi/16) */
+--- libfame-0.9.1/src/fame_motion_pmvfast.c.orig	2002-10-05 14:44:47.000000000 +0200
++++ libfame-0.9.1/src/fame_motion_pmvfast.c	2006-03-12 11:36:49.612232750 +0100
+@@ -19,6 +19,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "fame.h"
+ #include "fame_malloc.h"
+ #include "fame_motion.h"
+--- libfame-0.9.1/src/fame_malloc.c.orig	2003-06-20 14:40:30.000000000 +0200
++++ libfame-0.9.1/src/fame_malloc.c	2006-03-12 11:42:21.400968250 +0100
+@@ -20,6 +20,7 @@
+ 
+ #define ALIGN 32
+ 
++#include <stddef.h>
+ #include <stdlib.h>
+ 
+ void* fame_malloc(size_t size)
+@@ -36,9 +37,9 @@
+    */  
+ 
+   ptr = (unsigned char*) malloc(size+ALIGN);
+-  aligned = (unsigned char*) (((unsigned int)ptr & (~(ALIGN-1))) + ALIGN );
++  aligned = (unsigned char*) (((ptrdiff_t)ptr & (~(ALIGN-1))) + ALIGN );
+   padding = aligned - 1;
+-  *padding = (ALIGN-1) - ((unsigned int)ptr & (ALIGN-1));
++  *padding = (ALIGN-1) - ((ptrdiff_t)ptr & (ALIGN-1));
+ 
+   return ((void*)aligned);
+ }
