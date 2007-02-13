@@ -8,7 +8,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Fast Assembly Mpeg Encoding library
-Summary(pl.UTF-8):   Szybka biblioteka kodująca MPEG
+Summary(pl.UTF-8):	Szybka biblioteka kodująca MPEG
 Name:		libfame
 Version:	0.9.1
 Release:	4
@@ -32,7 +32,7 @@ FAME to biblioteka do szybkiego kodowania MPEG.
 
 %package devel
 Summary:	Includes to develop using FAME
-Summary(pl.UTF-8):   Pliki nagłówkowe FAME
+Summary(pl.UTF-8):	Pliki nagłówkowe FAME
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,7 +48,7 @@ korzystających z FAME.
 
 %package static
 Summary:	FAME static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne FAME
+Summary(pl.UTF-8):	Biblioteki statyczne FAME
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
