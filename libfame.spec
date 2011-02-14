@@ -11,7 +11,7 @@ Summary:	Fast Assembly Mpeg Encoding library
 Summary(pl.UTF-8):	Szybka biblioteka kodująca MPEG
 Name:		libfame
 Version:	0.9.1
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/fame/%{name}-%{version}.tar.gz
