@@ -6,12 +6,12 @@
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
-#
+
 Summary:	Fast Assembly Mpeg Encoding library
 Summary(pl.UTF-8):	Szybka biblioteka kodująca MPEG
 Name:		libfame
 Version:	0.9.1
-Release:	5
+Release:	6
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/fame/%{name}-%{version}.tar.gz
@@ -91,19 +91,20 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS CHANGES README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libfame-*.so.*.*.*
+%ghost %{_libdir}/libfame-*.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_bindir}/libfame-config
+%attr(755,root,root) %{_libdir}/libfame.so
+%{_libdir}/libfame.la
 %{_includedir}/fame*.h
-%{_aclocaldir}/*
-%{_mandir}/man3/*
+%{_aclocaldir}/libfame.m4
+%{_mandir}/man3/fame_*
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libfame.a
 %endif
