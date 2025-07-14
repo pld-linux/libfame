@@ -62,8 +62,8 @@ statyczną wersję biblioteki FAME.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1 
+%patch -P0 -p1
+%patch -P1 -p1 
 
 rm -f acinclude.m4
 
