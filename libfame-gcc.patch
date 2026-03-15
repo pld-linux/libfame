@@ -76,6 +76,27 @@ diff -uNr libfame-0.9.1/src.orig/table_mmx_const.h libfame-0.9.1/src/table_mmx_c
  #include "fame.h"
  #include "fame_malloc.h"
  #include "fame_motion.h"
+--- libfame-0.9.1/src/fame_rate_simple.c.orig	2002-10-05 14:44:47.000000000 +0200
++++ libfame-0.9.1/src/fame_rate_simple.c	2006-03-12 11:36:49.612232750 +0100
+@@ -20,6 +20,7 @@
+
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <math.h>
+ #include "fame.h"
+ #include "fame_rate_simple.h"
+--- libfame-0.9.1/src/fame_rate_1param.c.orig	2002-10-05 14:44:47.000000000 +0200
++++ libfame-0.9.1/src/fame_rate_1param.c	2006-03-12 11:36:49.612232750 +0100
+@@ -20,6 +20,7 @@
+
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <math.h>
+ #include "fame.h"
+ #include "fame_rate_1param.h"
+
 --- libfame-0.9.1/src/fame_malloc.c.orig	2003-06-20 14:40:30.000000000 +0200
 +++ libfame-0.9.1/src/fame_malloc.c	2006-03-12 11:42:21.400968250 +0100
 @@ -20,6 +20,7 @@
